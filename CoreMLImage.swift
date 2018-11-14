@@ -94,7 +94,7 @@ public class CoreMLImage: UIView, AVCaptureVideoDataOutputSampleBufferDelegate {
     let view = UIView(frame: CGRect(x: 0, y: 0, width: self.frame.width,
                                     height: self.frame.height))
 
-    let captureDevice = AVCaptureDevice.default(for: .video, position: .front)
+    let captureDevice = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .front)
 
     do {
       if (captureDevice != nil) {
